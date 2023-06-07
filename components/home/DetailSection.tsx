@@ -1,10 +1,8 @@
 import { CURRENT_STORE_KEY } from '@/hooks/useCurrentStore';
 import styles from '../../styles/detail.module.scss';
-import { IoIosArrowUp } from 'react-icons/io';
 import useSWR from 'swr';
 import { Store } from '@/types/store';
 import { useState } from 'react';
-import exp from 'constants';
 import DetailContent from './DetailContent';
 import DetailHeader from './DetailHeader';
 
