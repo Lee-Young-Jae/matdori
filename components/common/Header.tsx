@@ -5,6 +5,7 @@ import Image from 'next/image';
 import MatDoRiLogo from '../../public/MatDoRiLogo.png';
 
 interface Props {
+  onClickLogo?: () => void;
   rightElements?: React.ReactElement[];
 }
 
@@ -19,11 +20,11 @@ interface Props {
 // fill 이라는 속성을 next/Image에 추가하고
 // 부모에 width와 height를 지정해주면 된다.
 // 또한 본인에게 ObjectFit 속성으로 이미지가 어떻게 보여질지 지정할 수 있다.
-const Header = ({ rightElements }: Props) => {
+const Header = ({ onClickLogo, rightElements }: Props) => {
   return (
     <header className={styles.header}>
       <div className={styles.flexItem}>
-        <Link href="/" className={styles.box}>
+        <Link href="/" className={styles.box} onClick={onClickLogo}>
           <Image
             src={MatDoRiLogo}
             alt="MatDoRi Logo"
