@@ -8,6 +8,10 @@ const nextConfig = {
       'search.pstatic.net',
     ],
   },
+  i18n: {
+    locales: ['ko-KR'],
+    defaultLocale: 'ko-KR',
+  },
 };
 
 module.exports = nextConfig;
