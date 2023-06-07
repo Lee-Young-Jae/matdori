@@ -1,4 +1,4 @@
-import Header from '@/components/section1/Header';
+import Header from '@/components/common/Header';
 
 const Feedback = () => {
   return (

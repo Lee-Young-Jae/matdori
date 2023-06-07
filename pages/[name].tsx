@@ -1,12 +1,40 @@
+import DetailContent from '@/components/home/DetailContent';
+import DetailHeader from '@/components/home/DetailHeader';
 import { Store } from '@/types/store';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import styles from '../styles/detail.module.scss';
+import { useRouter } from 'next/router';
+import useCurrentStore from '@/hooks/useCurrentStore';
 
 interface Props {
   store: Store;
 }
 
-const storeDetail: NextPage<Props> = ({ store: Store }) => {
-  return <div>{Store.name}</div>;
+const StoreDetail: NextPage<Props> = ({ store }) => {
+  const expanded = true;
+
+  const router = useRouter();
+  const { setCurrentStore } = useCurrentStore();
+
+  const goToMap = () => {
+    setCurrentStore(store);
+    router.push(
+      `/?zoom=15&lat=${store.coordinates[0]}&lng=${store.coordinates[1]}`
+    );
+  };
+
+  return (
+    <div
+      className={`${styles.detailSection} ${styles.selected} ${styles.expanded}`}
+    >
+      <DetailHeader
+        currentStore={store}
+        expanded={expanded}
+        onClickArrow={goToMap}
+      ></DetailHeader>
+      <DetailContent currentStore={store} expanded={expanded}></DetailContent>
+    </div>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -27,4 +55,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { store } };
 };
 
-export default storeDetail;
+export default StoreDetail;

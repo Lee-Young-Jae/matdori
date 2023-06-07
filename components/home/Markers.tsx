@@ -1,5 +1,6 @@
 import { MAP_KEY } from '@/hooks/useMap';
 import { STORE_KEY } from '@/hooks/useStores';
+import useCurrentStore, { CURRENT_STORE_KEY } from '@/hooks/useCurrentStore';
 import { ImageIcon, NaverMap } from '@/types/map';
 import { Store } from '@/types/store';
 import { useCallback, useState } from 'react';
@@ -10,32 +11,35 @@ const Markers = () => {
   const { data: map } = useSWR<NaverMap>(MAP_KEY);
   const { data: stores } = useSWR<Store[]>(STORE_KEY);
 
-  const [selectedStore, setSelectedStore] = useState(false);
+  const { data: currentStore } = useSWR<Store>(CURRENT_STORE_KEY);
+  const { setCurrentStore, clearCurrentStore } = useCurrentStore();
 
   if (!map || !stores) return null;
-
-  const onClickMarker = () => {
-    setSelectedStore((prev) => !prev);
-    // selectedStore 가 변하지 않는 이유?
-    // 1. onClickMarker 함수가 새로 생성되지 않는다.
-    // 2. onClickMarker 함수가 생성되지 않는 이유는?
-    //    - useCallback 을 사용하지 않았기 때문이다.
-    console.log('selectedStore: ', selectedStore);
-  };
 
   return (
     <>
       {stores.map((store) => {
         return (
           <Marker
-            icon={generateStoreMarkerIcon(store.season, selectedStore)}
+            icon={generateStoreMarkerIcon(store.season, false)}
             map={map}
             coordinates={store.coordinates}
             key={store.nid}
-            onClick={onClickMarker}
+            onClick={() => {
+              setCurrentStore(store);
+            }}
           />
         );
       })}
+      {currentStore && (
+        <Marker
+          icon={generateStoreMarkerIcon(currentStore.season, true)}
+          map={map}
+          coordinates={currentStore.coordinates}
+          onClick={clearCurrentStore}
+          key={currentStore.nid}
+        />
+      )}
     </>
   );
 };
