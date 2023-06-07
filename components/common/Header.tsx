@@ -36,7 +36,7 @@ const Header = ({ onClickLogo, rightElements }: Props) => {
             width={100}
             height={20}
             placeholder="blur"
-            // style={{ objectFit: 'fill' }}
+            style={{ objectFit: 'cover' }}
           />
         </Link>
       </div>

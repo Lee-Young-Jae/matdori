@@ -5,6 +5,8 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import styles from '../styles/detail.module.scss';
 import { useRouter } from 'next/router';
 import useCurrentStore from '@/hooks/useCurrentStore';
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 interface Props {
   store: Store;
@@ -24,16 +26,22 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
   };
 
   return (
-    <div
-      className={`${styles.detailSection} ${styles.selected} ${styles.expanded}`}
-    >
-      <DetailHeader
-        currentStore={store}
-        expanded={expanded}
-        onClickArrow={goToMap}
-      ></DetailHeader>
-      <DetailContent currentStore={store} expanded={expanded}></DetailContent>
-    </div>
+    <>
+      <NextSeo
+        title={`${store.name}`}
+        description={`${store.name} 매장의 정보를 확인할 수 있습니다.`}
+      />
+      <div
+        className={`${styles.detailSection} ${styles.selected} ${styles.expanded}`}
+      >
+        <DetailHeader
+          currentStore={store}
+          expanded={expanded}
+          onClickArrow={goToMap}
+        ></DetailHeader>
+        <DetailContent currentStore={store} expanded={expanded}></DetailContent>
+      </div>
+    </>
   );
 };
 

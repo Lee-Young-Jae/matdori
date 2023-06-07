@@ -3,8 +3,9 @@ import { Store } from '@/types/store';
 import { NextPage } from 'next';
 import useStores from '@/hooks/useStores';
 import { useEffect } from 'react';
-import HomeHeader from '@/components/home/Header';
+import Header from '@/components/home/Header';
 import DetailSection from '@/components/home/DetailSection';
+import { NextSeo } from 'next-seo';
 
 interface Props {
   stores: Store[];
@@ -19,7 +20,12 @@ const Home: NextPage<Props> = ({ stores }) => {
 
   return (
     <>
-      <HomeHeader></HomeHeader>
+      <NextSeo
+        title="매장 지도"
+        description="맛과 분위기, 인스타 감성을 포함한 나만의 맛집을 소개합니다."
+      />
+
+      <Header />
       <main
         style={{
           position: 'relative',
