@@ -48,7 +48,10 @@ export const getStaticProps = async () => {
   /**
    * TODO: Next API Routes로 불러오기
    */
-  const stores = (await import('../public/stores.json')).default;
+
+  const stores = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/stores`
+  ).then((res) => res.json());
 
   // json 파일을 불러올때는 import를 사용한다.
   // default를 사용하는 이유는 json 파일을 불러올때는 default로 불러와야한다.
