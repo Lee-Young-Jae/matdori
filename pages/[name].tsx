@@ -30,6 +30,7 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
       <NextSeo
         title={`${store.name}`}
         description={`${store.name} 매장의 정보를 확인할 수 있습니다.`}
+        canonical={`https://matdori.vercel.app/${store.name}`}
       />
       <div
         className={`${styles.detailSection} ${styles.selected} ${styles.expanded}`}
