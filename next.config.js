@@ -6,6 +6,7 @@ const nextConfig = {
       'localhost',
       'matdori.s3.ap-northeast-2.amazonaws.com',
       'search.pstatic.net',
+      'matdori.vercel.app',
     ],
   },
   i18n: {
