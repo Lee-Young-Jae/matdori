@@ -23,6 +23,7 @@ const Home: NextPage<Props> = ({ stores }) => {
       <NextSeo
         title="매장 지도"
         description="맛과 분위기, 인스타 감성을 포함한 나만의 맛집을 소개합니다."
+        canonical="https://matdori.vercel.app/"
       />
 
       <Header />
