@@ -7,6 +7,7 @@ const nextConfig = {
       'matdori.s3.ap-northeast-2.amazonaws.com',
       'search.pstatic.net',
       'matdori.vercel.app',
+      'ldb-phinf.pstatic.net',
     ],
   },
   i18n: {
