@@ -5,7 +5,7 @@
     "episode": 1,
     "characteristic": "",
     "name": "연어초밥",
-    "coordinates": [126.943404, 37.5572739],
+    "coordinates": [37.5572739, 126.943404],
     "foodKind": "일식, 초밥, 롤",
     "address": "서울 서대문구 대현동 101-10 3층",
     "phone": "02-313-2611",
@@ -52,7 +52,7 @@
     "episode": 1,
     "characteristic": "",
     "name": "베러댄",
-    "coordinates": [127.05703422887339, 37.58841786215914],
+    "coordinates": [37.58841786215914, 127.05703422887339],
     "foodKind": "음식점, 카페, 디저트",
     "address": "서울 동대문구 휘경동 317-9 진성빌딩 1층 카페 베러댄",
     "phone": "070-4327-5946",
@@ -161,6 +161,62 @@
       { "name": "사케낫또동", "price": "18,500원" },
       { "name": "사케우니낫또동", "price": "28,000원" },
       { "name": "사케네기도로동", "price": "13,000원" }
+    ]
+  },
+  {
+    "nid": 1949418442,
+    "season": 1,
+    "episode": 1,
+    "characteristic": "",
+    "name": "베란다",
+    "coordinates": [37.5753694, 126.9705503],
+    "foodKind": "음식점, 카페,디저트",
+    "address": "서울 종로구 내자동 162",
+    "phone": "02-733-7189",
+    "images": [
+      "https://ldb-phinf.pstatic.net/20220720_7/1658321309843eEMfe_JPEG/EBE78BDF-3BE3-418E-AE76-7F89B27C2BBF.jpeg",
+      "https://ldb-phinf.pstatic.net/20220628_268/1656404846080atiQ8_JPEG/348D5FDE-89DE-45C3-BA12-A856B08891A5.jpeg",
+      "https://ldb-phinf.pstatic.net/20220628_162/16564048574092BCPi_JPEG/88F35947-02BD-42CC-B413-DC0E0ACF11FD.jpeg"
+    ],
+    "description": "카페 베란다는 2022.06.26 에 오픈했습니다.\n\n책도 읽고, 그림도 그리고, 멍을 때리기도 하고, 혼자 혹은 기분좋은 만남들. 커피 한잔, 와인 한잔을 마시며 작은 위로가 되는 시간. 따스한 공간.\n그런곳을 만들고 싶었습니다.\n\ncoffee, wine, toast, books, sunshine!\n아기와 동물친구들도 환영합니다",
+    "menus": [
+      { "name": "아메리카노 ice", "price": "5,000원" },
+      { "name": "카페라떼 ice", "price": "5,500원" },
+      { "name": "베란다의 비엔나 hot", "price": "6,000원" },
+      { "name": "베란다의 비엔나 ice", "price": "6,500원" },
+      { "name": "수제 애플시나몬티 hot", "price": "6,500원" },
+      { "name": "수제 애플시나몬티 ice", "price": "7,000원" },
+      { "name": "토마토바질에이드", "price": "6,000원" },
+      { "name": "레몬에이드", "price": "6,000원" },
+      { "name": "프렌치 얼그레이 hot", "price": "5,500원" },
+      { "name": "프렌치 얼그레이 ice", "price": "6,000원" },
+      { "name": "바질페스토토스트", "price": "9,500원" },
+      { "name": "토마토마리네이드 토스트", "price": "7,500원" },
+      { "name": "수박주스 (2023여름에 만나요)", "price": "5,000원" }
+    ]
+  },
+  {
+    "nid": 1777182536,
+    "season": 1,
+    "episode": 1,
+    "characteristic": "",
+    "name": "콘드에뻬뻬",
+    "coordinates": [37.5621939, 127.007512],
+    "foodKind": "음식점, 양식",
+    "address": "서울 중구 장충동1가 33-9 1층",
+    "phone": "0507-1365-4339",
+    "images": [
+      "https://ldb-phinf.pstatic.net/20230502_85/1683038580467Jwqrt_JPEG/A885E121-12AF-4856-A8A3-DD8A3B5337E6.jpeg",
+      "https://ldb-phinf.pstatic.net/20230502_139/1683038580529sXavb_JPEG/A2F1BBB9-9B21-4469-A74C-D01F1E956EB3.jpeg",
+      "https://ldb-phinf.pstatic.net/20230502_82/1683038580489IUrtS_JPEG/9337C3C7-389B-4068-9DB2-C260A03090AF.jpeg"
+    ],
+    "description": "낮에는 브런치바로, 디너는 와인바로 운영됩니다.\n이용시간은 최대 2시간으로 안내 드리는 점 참고 부탁드립니다.\n\n* Bunch bar : am11-pm5 (L.O. pm3)\n   브런치 1인1음식 필수\n* Break time : pm3:00-pm5:00\n   1인1주문 필수 (브레이크타임 음료/디저트만 주문 가능)\n* Dinner wine bar : pm5-pm10 (L.O. pm9)\n   1인1주문 필수",
+    "menus": [
+      { "name": "쭈꾸미파스타", "price": "24,000원" },
+      { "name": "브리치즈구이", "price": "23,000원" },
+      { "name": "프렌치토스트", "price": "15,000원" },
+      { "name": "불고기샌드위치", "price": "19,000원" },
+      { "name": "단호박스프", "price": "13,000원" }
     ]
   }
 ]
